@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
      * Subscribe to app spot data which is coming from server
      */
     private fun subscribeAppSpotData() {
+
         viewModel.onAppSpotData().observe(this, Observer {
             if (it != null) {
                 binding.pgLoadData.visibility = View.GONE
